@@ -18,3 +18,15 @@ pip install -r requirements.txt
 ## Run using gunicorn
 
 `gunicorn metaddok:app -b 0.0.0.0:7676 -w 8`
+
+## Demo instances
+
+You can query all.addok.xyz, which queries 3 addok backend running:
+- BANO addresses
+- BAN addresses
+- OSM POI
+
+Examples:
+- http://all.addok.xyz/search?q=Aeroport+roissy
+- http://all.addok.xyz/search?q=39+quai+andre+citroen+paris
+- http://all.addok.xyz/search?q=71+place+corneille+poissy
