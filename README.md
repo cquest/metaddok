@@ -21,10 +21,11 @@ pip install -r requirements.txt
 
 ## Demo instances
 
-You can query all.addok.xyz, which queries 3 addok backend running:
+You can query all.addok.xyz, which queries 4 addok backend running:
 - BANO addresses
 - BAN addresses
 - OSM POI
+- SIRENE POI
 
 Examples:
 - http://all.addok.xyz/search?q=Aeroport+roissy
