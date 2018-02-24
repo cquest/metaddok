@@ -30,13 +30,13 @@ class GeocodeResource(object):
                       reverse=True)
 
         # how many results are expected ?
-        if "id" in req.params:
-            limit = int(req.params["id"])
+        if "limit" in req.params:
+            limit = int(req.params["limit"])
         else:
             limit = 5
         # limit number of results
-        if len(glob)>5:
-            glob = glob[0:5]
+        if len(glob) > limit:
+            glob = glob[0:limit]
 
         # send back json to client
         resp.body = json.dumps(dict(type="FeatureCollection", features=glob,
