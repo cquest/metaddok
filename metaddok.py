@@ -19,10 +19,11 @@ class GeocodeResource(object):
         # our global agregated result
         glob = []
         for result in results:
-            features = json.loads(result.text)
-            for feature in features['features']:
-                feature['attribution']=features['attribution']
-                glob.append(feature)
+            if result.text:
+                features = json.loads(result.text)
+                for feature in features['features']:
+                    feature['attribution'] = features['attribution']
+                    glob.append(feature)
 
         # sort by ascending scores
         glob = sorted(glob, key=lambda k: k['properties'].get('score', 0),
